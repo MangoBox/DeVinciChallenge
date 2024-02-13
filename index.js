@@ -6,11 +6,8 @@ const { MongoClient } = require('mongodb');
 var livereload = require("livereload");
 var connectLiveReload = require("connect-livereload");
 
-
 const liveReloadServer = livereload.createServer();
 liveReloadServer.watch('client/src');
-
-
 
 const app = express();
 
@@ -49,7 +46,7 @@ app.get("/find", (req, res) => {
     teams[finder][found] = Date.now();
     console.log(teams);
   }
-  res.sendStatus(200);
+  res.sendFile(path.resolve(__dirname, 'client', 'build', 'Found.html'))
 
   
 });

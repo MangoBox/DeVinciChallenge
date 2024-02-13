@@ -16,7 +16,7 @@ import Container from '@mui/material/Container';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import Done from '@mui/icons-material/Done'
 import QuestionMark from '@mui/icons-material/QuestionMark'
-import Divider from '@mui/material/Divider'
+import Header from './Header';
 
 function formatTime(delta) {
   var deltaSecs = delta / 1000;
@@ -151,7 +151,7 @@ function App() {
 
   return (
   <Stack>
-    <img style={{display:'flex', alignSelf: 'center'}} src={logo} width={150} height={150}/>
+    <Header/>
     <Container maxWidth="md">
       {teamAccordions}
     </Container>
