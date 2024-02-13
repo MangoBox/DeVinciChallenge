@@ -14,7 +14,8 @@ liveReloadServer.watch('client/src');
 
 const app = express();
 
-teamsFound = [[],[],[],[],[],[],[],[],[],[],[]];
+var teams = Array.from({ length: 10 }, () => Array(10).fill(0));
+//teams[0][0] = 1707822079000;  
 
 liveReloadServer.server.once("connection", () => {
     setTimeout(() => {
@@ -32,10 +33,29 @@ app.use(cors());
 const path = require('path');
 
 app.get("/api", (req, res) => {
-    res.json(teamsFound);
+    //res.json(teams);
+    res.json(teams);
+});
+
+app.get("/find", (req, res) => {
+  //res.json(teams);
+  console.log("req finder: " +req.query['finder']  );
+  if(req.query['finder'] != null && req.query['found'] != null) {
+    
+    //var txt = "Team " + findingTeam + " has found Team " + foundTeam;
+    //console.log(txt);
+    finder = parseInt(req.query['finder']);
+    found = parseInt(req.query['found']);
+    teams[finder][found] = Date.now();
+    console.log(teams);
+  }
+  res.sendStatus(200);
+
+  
 });
 
 app.get('*', (req, res) => {
+    console.log("Found");
     res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
 });
 
