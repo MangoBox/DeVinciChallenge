@@ -14,18 +14,17 @@ const app = express();
 var teams = Array.from({ length: 10 }, () => Array(10).fill(0));
 
 var teamQuizzes = [
-  "https://quiz1.com",
-  "https://quiz2.com",
+  "https://docs.google.com/forms/d/1NTUFO2KRfw2KhvulBmiRO3CN1evtsE2SW3WMguysM2k/viewform?edit_requested=true",
+  "https://forms.gle/KaGtc24tzWsTAof88",
   "https://quiz3.com",
   "https://quiz4.com",
-  "https://quiz5.com",
+  "https://forms.gle/bd2vB5PeJaquMyvh7",
   "https://quiz6.com",
   "https://quiz7.com",
-  "https://quiz8.com",
-  "https://quiz9.com",
-  "https://quiz10.com"
+  "https://docs.google.com/spreadsheets/d/1x_gUYZQsGAS7gjyGmnu6KtI-bFSl0sCqbJiXGUymIGw/edit",
+  "https://docs.google.com/forms/d/e/1FAIpQLScrMl3rh-mqDcH3CpM_-xMGfXdwKhIA038LZQytU07B3RjFNw/viewform?usp=sharing",
+  "https://docs.google.com/forms/d/1wwKweQEfJfLn0taeZwk-NS6jTdlryTFGPqNY-zl8p10/viewform?edit_requested=true"
 ];
-//teams[0][0] = 1707822079000;  
 
 liveReloadServer.server.once("connection", () => {
     setTimeout(() => {
