@@ -38,6 +38,10 @@ function App() {
       .then((teams) => setTeam(teams));
   }, []);
 
+  React.useEffect(() => {
+    document.title = "ESILV Challenge"
+ }, []);
+
   //var teams2 = Array.from({ length: 10 }, () => Array(10).fill(0));
   //teams2[0][0] = 1707818001000;
   //console.log(teams2);

@@ -43,7 +43,7 @@ var teamQuizzes = [
   "https://quiz3.com",
   "https://quiz4.com",
   "https://forms.gle/bd2vB5PeJaquMyvh7",
-  "https://quiz6.com",
+  "https://docs.google.com/forms/d/e/1FAIpQLSfpF_ynSPJgNed6LBk-FIgw5Ru2_8YAD7P-USZEFBIZ2xex-g/viewform?usp=sharing",
   "https://quiz7.com",
   "https://docs.google.com/spreadsheets/d/1x_gUYZQsGAS7gjyGmnu6KtI-bFSl0sCqbJiXGUymIGw/edit",
   "https://docs.google.com/forms/d/e/1FAIpQLScrMl3rh-mqDcH3CpM_-xMGfXdwKhIA038LZQytU07B3RjFNw/viewform?usp=sharing",
@@ -107,7 +107,7 @@ app.get("/find", (req, res) => {
 });
 
 app.get('*', (req, res) => {
-    console.log("Found");
+    //console.log("Found");
     res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
 });
 
