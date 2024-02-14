@@ -64,9 +64,6 @@ function App() {
 
   var teamAccordions = !teams ? "Loading..." : teams.map((team, index) =>
     <Box>
-
-
-
     <Accordion>
       <AccordionSummary
         expandIcon={<ArrowDropDownIcon />}
