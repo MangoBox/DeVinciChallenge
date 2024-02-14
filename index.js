@@ -1,6 +1,8 @@
 const express = require('express');
 const cors = require("cors");
 
+const fs = require('fs');
+
 //const { MongoClient } = require('mongodb');
 
 var livereload = require("livereload");
@@ -11,7 +13,30 @@ liveReloadServer.watch('client/src');
 
 const app = express();
 
-var teams = Array.from({ length: 10 }, () => Array(10).fill(0));
+function saveArrayToFile(array, filename) {
+  const jsonData = JSON.stringify(array);
+  fs.writeFileSync(filename, jsonData);
+  console.log('Array saved to', filename);
+}
+
+
+function readArrayFromFile(filename) {
+  try {
+      const jsonData = fs.readFileSync(filename, 'utf8');
+      const array = JSON.parse(jsonData);
+      console.log('Array read from', filename);
+      return array;
+  } catch (error) {
+      console.error('Error reading file:', error);
+      return null;
+  }
+}
+
+
+//var teams = Array.from({ length: 10 }, () => Array(10).fill(0));
+
+//saveArrayToFile(teams, 'teams.json');
+var teams = readArrayFromFile('teams.json');
 
 var teamQuizzes = [
   "https://docs.google.com/forms/d/1NTUFO2KRfw2KhvulBmiRO3CN1evtsE2SW3WMguysM2k/viewform?edit_requested=true",
@@ -65,6 +90,7 @@ app.get("/find", (req, res) => {
     teams[finder-1][found-1] = Date.now();
     console.log(teams);
   }
+  saveArrayToFile(teams, 'teams.json');
   //res.sendFile(path.resolve(__dirname, 'client', 'build', 'Found.html'))
   res.redirect(teamQuizzes[found-1]);
   res.end();
