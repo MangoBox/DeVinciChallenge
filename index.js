@@ -40,11 +40,11 @@ var teams = readArrayFromFile('teams.json');
 var teamQuizzes = [
   "https://docs.google.com/forms/d/1NTUFO2KRfw2KhvulBmiRO3CN1evtsE2SW3WMguysM2k/viewform?edit_requested=true",
   "https://forms.gle/KaGtc24tzWsTAof88",
-  "https://quiz3.com",
-  "https://quiz4.com",
+  "https://www.youtube.com/watch?v=dQw4w9WgXcQ&t=1s&pp=ygUJcmljayByb2xs",  //Team 3!!!
+  "https://docs.google.com/spreadsheets/d/1QCLbITPl256V4jEy_AHwgeR3gVkaqjPVYWgwaJssm_o/edit#gid=0",
   "https://forms.gle/bd2vB5PeJaquMyvh7",
   "https://docs.google.com/forms/d/e/1FAIpQLSfpF_ynSPJgNed6LBk-FIgw5Ru2_8YAD7P-USZEFBIZ2xex-g/viewform?usp=sharing",
-  "https://quiz7.com",
+  "https://forms.gle/Q1is24MpLMRrEN1D9",
   "https://docs.google.com/spreadsheets/d/1x_gUYZQsGAS7gjyGmnu6KtI-bFSl0sCqbJiXGUymIGw/edit",
   "https://docs.google.com/forms/d/e/1FAIpQLScrMl3rh-mqDcH3CpM_-xMGfXdwKhIA038LZQytU07B3RjFNw/viewform?usp=sharing",
   "https://docs.google.com/forms/d/1wwKweQEfJfLn0taeZwk-NS6jTdlryTFGPqNY-zl8p10/viewform?edit_requested=true"
