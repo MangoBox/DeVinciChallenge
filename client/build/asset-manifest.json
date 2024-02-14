@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.65be44ce.css",
+    "main.js": "/static/js/main.32731918.js",
+    "static/js/592.599f76a2.chunk.js": "/static/js/592.599f76a2.chunk.js",
+    "static/media/Logo_esilv_png_blanc.png": "/static/media/Logo_esilv_png_blanc.cb5018802bdf05fb3f7f.png",
+    "index.html": "/index.html",
+    "main.65be44ce.css.map": "/static/css/main.65be44ce.css.map",
+    "main.32731918.js.map": "/static/js/main.32731918.js.map",
+    "592.599f76a2.chunk.js.map": "/static/js/592.599f76a2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.65be44ce.css",
+    "static/js/main.32731918.js"
+  ]
+}
