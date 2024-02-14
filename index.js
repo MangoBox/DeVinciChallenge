@@ -32,7 +32,6 @@ function readArrayFromFile(filename) {
   }
 }
 
-
 //var teams = Array.from({ length: 10 }, () => Array(10).fill(0));
 
 //saveArrayToFile(teams, 'teams.json');
@@ -76,23 +75,32 @@ app.get("/find", (req, res) => {
   console.log("req finder: " +req.query['finder']  );
   if(req.query['finder'] != null && req.query['found'] != null) {
     
-    //var txt = "Team " + findingTeam + " has found Team " + foundTeam;
-    //console.log(txt);
+    
     finder = parseInt(req.query['finder']);
     found = parseInt(req.query['found']);
-    //Special case for Team 10
-    if(finder == 0) {
-      finder = 10;
+    //Check all team names are in bounds.
+    if(finder > 10 || finder < 1 || found > 10 || found < 1) {
+      res.end();
+    } else {
+      //Special case for Team 10
+      if(finder == 0) {
+        finder = 10;
+      }
+      if(found == 0) {
+        found = 10;
+      }
+
+      teams[finder-1][found-1] = Date.now();
+      //console.log(teams);
+      var txt = "Team " + finder + " has found Team " + found + "'s Transmitter!";
+      console.log(txt);
+
+      res.redirect(teamQuizzes[found-1]);
     }
-    if(found == 0) {
-      found = 10;
-    }
-    teams[finder-1][found-1] = Date.now();
-    console.log(teams);
   }
   saveArrayToFile(teams, 'teams.json');
   //res.sendFile(path.resolve(__dirname, 'client', 'build', 'Found.html'))
-  res.redirect(teamQuizzes[found-1]);
+  
   res.end();
 
   
