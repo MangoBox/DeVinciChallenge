@@ -79,7 +79,7 @@ app.get("/find", (req, res) => {
     finder = parseInt(req.query['finder']);
     found = parseInt(req.query['found']);
     //Check all team names are in bounds.
-    if(finder > 10 || finder < 1 || found > 10 || found < 1) {
+    if(finder > 10 || finder < 0 || found > 10 || found < 0) {
       res.end();
     } else {
       //Special case for Team 10
