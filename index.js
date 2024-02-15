@@ -40,7 +40,7 @@ var teams = readArrayFromFile('teams.json');
 var teamQuizzes = [
   "https://docs.google.com/forms/d/1NTUFO2KRfw2KhvulBmiRO3CN1evtsE2SW3WMguysM2k/viewform?edit_requested=true",
   "https://forms.gle/KaGtc24tzWsTAof88",
-  "https://www.youtube.com/watch?v=dQw4w9WgXcQ&t=1s&pp=ygUJcmljayByb2xs",  //Team 3!!!
+  "https://forms.gle/Jgi8kpxC1rnB7fwZA", 
   "https://docs.google.com/spreadsheets/d/1QCLbITPl256V4jEy_AHwgeR3gVkaqjPVYWgwaJssm_o/edit#gid=0",
   "https://forms.gle/bd2vB5PeJaquMyvh7",
   "https://docs.google.com/forms/d/e/1FAIpQLSfpF_ynSPJgNed6LBk-FIgw5Ru2_8YAD7P-USZEFBIZ2xex-g/viewform?usp=sharing",
